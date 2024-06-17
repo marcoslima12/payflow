@@ -3,6 +3,8 @@ import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/themes/app_images.dart';
 import 'package:payflow/shared/themes/app_text_styles.dart';
 
+import '../../shared/widgets/login_button/login_button.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -49,41 +51,9 @@ class _LoginPageState extends State<LoginPage> {
                       textAlign: TextAlign.center,
                       style: TextStyles.titleHome,
                     ),
-                    Padding(
-                        padding: const EdgeInsets.only(top: 40, bottom: 20),
-                        child: Container(
-                          height: 56,
-                          width: size.width * 0.8,
-                          decoration: BoxDecoration(
-                            color: AppColors.shape,
-                            borderRadius: BorderRadius.circular(5),
-                            border: const Border.fromBorderSide(
-                              BorderSide(color: AppColors.stroke),
-                            ),
-                          ),
-                          child: Row(
-                            children: [
-                              Container(
-                                width: (size.width * 0.8) *
-                                    0.2, // 30% of the container's width
-                                decoration: const BoxDecoration(
-                                  border: Border(
-                                    right: BorderSide(color: AppColors.stroke),
-                                  ),
-                                ),
-                                child: Image.asset(AppImages.google),
-                              ),
-                              Expanded(
-                                child: Center(
-                                  child: Text(
-                                    "Entrar com Google",
-                                    style: TextStyles.buttonGray,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ))
+                    LoginButton(onTap: () {
+                      print("clicou");
+                    }),
                   ],
                 ),
               ),
