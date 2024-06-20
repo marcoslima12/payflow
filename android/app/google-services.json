@@ -12,7 +12,12 @@
           "package_name": "com.example.payflow"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "988146062374-eoqh38gehf9jlt3nh8o51vvrn6v8m64f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyArI4XlL4IpHL-AvxyaV6idp9TQ7w93smA"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988146062374-eoqh38gehf9jlt3nh8o51vvrn6v8m64f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "988146062374-7p19pc445rgcu3ga94610dca49ekvf5m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.payflow"
+              }
+            }
+          ]
         }
       }
     }

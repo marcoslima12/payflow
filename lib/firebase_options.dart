@@ -63,6 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '988146062374',
     projectId: 'play-flow-81dcb',
     storageBucket: 'play-flow-81dcb.appspot.com',
+    iosClientId: '988146062374-7p19pc445rgcu3ga94610dca49ekvf5m.apps.googleusercontent.com',
     iosBundleId: 'com.example.payflow',
   );
+
 }
