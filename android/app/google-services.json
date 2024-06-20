@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "988146062374",
+    "project_id": "play-flow-81dcb",
+    "storage_bucket": "play-flow-81dcb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988146062374:android:c21a53222cb560fbc102e7",
+        "android_client_info": {
+          "package_name": "com.example.payflow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArI4XlL4IpHL-AvxyaV6idp9TQ7w93smA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
