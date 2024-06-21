@@ -65,7 +65,9 @@ class _LoginPageState extends State<LoginPage> {
                       textAlign: TextAlign.center,
                       style: TextStyles.titleHome,
                     ),
-                    LoginButton(onTap: _loginController.signInWithGoogle),
+                    LoginButton(onTap: () {
+                      _loginController.signInWithGoogle(context);
+                    }),
                   ],
                 ),
               ),
