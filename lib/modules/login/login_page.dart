@@ -1,10 +1,10 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/themes/app_images.dart';
 import 'package:payflow/shared/themes/app_text_styles.dart';
-
-import '../../shared/widgets/login_button/login_button.dart';
+import 'package:payflow/shared/widgets/login_button/login_button.dart';
+import 'login_controller.dart'; // Importa o controlador de login
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -14,26 +14,17 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final LoginController _loginController = LoginController();
   User? _user;
 
   @override
   void initState() {
     super.initState();
-    _auth.authStateChanges().listen((event) {
+    FirebaseAuth.instance.authStateChanges().listen((event) {
       setState(() {
         _user = event;
       });
     });
-  }
-
-  void _handleGoogleSignIn() {
-    try {
-      GoogleAuthProvider _googleAuthProvider = GoogleAuthProvider();
-      _auth.signInWithProvider(_googleAuthProvider);
-    } catch (error) {
-      print(error);
-    }
   }
 
   @override
@@ -74,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                       textAlign: TextAlign.center,
                       style: TextStyles.titleHome,
                     ),
-                    LoginButton(onTap: _handleGoogleSignIn),
+                    LoginButton(onTap: _loginController.signInWithGoogle),
                   ],
                 ),
               ),
