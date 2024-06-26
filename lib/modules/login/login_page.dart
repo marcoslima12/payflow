@@ -6,8 +6,6 @@ import 'package:payflow/shared/themes/app_text_styles.dart';
 import 'package:payflow/shared/widgets/login_button/login_button.dart';
 import 'login_controller.dart'; // Importa o controlador de login
 
-import 'dart:developer';
-
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
