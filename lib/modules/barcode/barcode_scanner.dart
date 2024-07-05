@@ -3,6 +3,8 @@ import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/themes/app_text_styles.dart';
 import 'package:payflow/shared/widgets/set_label_buttons/set_label_buttons.dart';
 
+import '../../shared/widgets/bottom_sheet_widget/bottom_sheet.dart';
+
 class BarCodePage extends StatefulWidget {
   const BarCodePage({super.key});
 
@@ -13,6 +15,14 @@ class BarCodePage extends StatefulWidget {
 class _BarCodePageState extends State<BarCodePage> {
   @override
   Widget build(BuildContext context) {
+    return BottomSheetWidget(
+      primaryLabel: "Escanear novamente",
+      primaryOnPressed: () {},
+      secondaryLabel: "Digitar código",
+      secondaryOnPressed: () {},
+      title: "Não foi possível identificar um código de barras",
+      subtitle: "Tente escanear novamente ou digite o código do seu boleto",
+    );
     return SafeArea(
         top: true,
         left: true,
