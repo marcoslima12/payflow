@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:payflow/modules/home/home_controller.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import '../../shared/themes/app_colors.dart';
 import '../../shared/themes/app_text_styles.dart';
@@ -36,17 +37,31 @@ class _HomeState extends State<Home> {
                     style: TextStyles.titleRegular,
                     children: [
                       TextSpan(
-                          text: "Marcos", style: TextStyles.titleBoldBackground)
+                          text: "Marcos",
+                          style: TextStyles.titleBoldBackground),
                     ]),
               ),
               subtitle: Text("Mantenha suas contas em dia!",
                   style: TextStyles.captionShape),
-              trailing: Container(
-                  height: 48,
-                  width: 48,
-                  decoration: BoxDecoration(
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    height: 48,
+                    width: 48,
+                    decoration: BoxDecoration(
                       color: Colors.black,
-                      borderRadius: BorderRadius.circular(5))),
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.logout, color: AppColors.background),
+                    onPressed: () async {
+                      Navigator.pushReplacementNamed(context, "/login");
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
         ),
